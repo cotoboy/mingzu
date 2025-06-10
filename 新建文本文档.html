@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名族装材 - 全球高端装修材料供应商</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2980b9;
+            --accent-color: #e67e22;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #333;
+            --text-light: #6c757d;
+            --white: #fff;
+            --border-radius: 4px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--accent-color);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--box-shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .language-selector select {
+            background-color: transparent;
+            color: var(--white);
+            border: 1px solid var(--white);
+            padding: 3px 10px;
+            border-radius: var(--border-radius);
+        }
+        
+        .contact-info a {
+            color: var(--white);
+            margin-left: 15px;
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+        
+        .main-header {
+            padding: 15px 0;
+        }
+        
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/24c62f207e02cf609d416f0e44e36bf5-image.png') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 60px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--light-color);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .product-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        /* Categories Section */
+        .categories {
+            background-color: var(--white);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            position: relative;
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: var(--white);
+        }
+        
+        .category-overlay h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/24c62f207e02cf609d416f0e44e36bf5-image.png') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-item h3 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+        
+        .stat-item p {
+            font-size: 20px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light-color);
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .author-info p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--white);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header-top .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .contact-info {
+                margin-right: 0;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="zh">中文</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:400-882-6662"><i class="fas fa-phone"></i> 400-882-6662</a>
+                    <a href="mailto:info@chinamingzu.com"><i class="fas fa-envelope"></i> info@chinamingzu.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    
+[](@replace=1)
+                    名族装材
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#categories">产品分类</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>有装修的地方就有名族装材</h1>
+            <p>闻着有木香，用着很健康 - 名族高定木香板产品精品馆</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn">查看产品</a>
+                <a href="#contact" class="btn btn-outline">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于名族</h2>
+                <p>上海龙胜实业有限公司是中国装材头部企业，集智能家居、吊顶电器、模块化顶墙柜系统、LED照明等装配式高端装材的研发、制造、营销于一体</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>我们的使命</h3>
+                    <p>名族装材致力于为用户打造简易安装快入住、省心健康无醛的美好家装环境。我们坚守"便捷、耐用、环保、美"的产品理念，不断创新和突破。</p>
+                    <p>名族高定木香板专注对墙面新材料新技术的思考和研究，不断升级基材和面材，做到工艺和造型的突破和革新，满足用户对墙面装修的所有想要。</p>
+                    <p>我们拥有200,000+平方米生产基地，2大CNAS检测中心，200+专业研发团队和4大研发中心，为产品质量提供坚实保障。</p>
+                    <a href="#contact" class="btn">了解更多</a>
+                </div>
+                <div class="about-image">
+                    
+[](@replace=2)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的优势</h2>
+                <p>名族装材以高质量与高性价比领跑中国装材行业</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>健康环保</h3>
+                    <p>无甲醛，ENF级环保，无辐射，可达A类装饰材料要求。珍贵木粉含量高，产品高端，细闻有天然木香味。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>防火阻燃</h3>
+                    <p>防火介质,离火即熄,离火即灭,达到BF1级防火等级。防水耐潮，不发霉,不渗透,防弯曲,防虫防蚁,防变形,耐酸碱。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>快捷安装</h3>
+                    <p>模块化安装,省时省薪,适用范围不受限。采用一体化整装设计，公母槽结构，自由裁切拼接搭配。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>艺术设计</h3>
+                    <p>百变的造型和扁平线条勾勒出三维立体空间，规整排列与几何错落的交互，立体式结构组合，营造艺术气质。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门产品</h2>
+                <p>名族的每一个超级单品都是超级爆品</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        
+[](@replace=3)
+                    </div>
+                    <div class="product-info">
+                        <h3>名族高定木香板</h3>
+                        <p>闻着有木香，用着很健康。环保竹木纤维材料，无醛无胶无重金属。</p>
+                        <div class="product-price">¥200-500/平方米</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        
+[](@replace=4)
+                    </div>
+                    <div class="product-info">
+                        <h3>名族大板吊顶</h3>
+                        <p>无醛不伤身，漂亮不变色。吊顶界的天花板，无框无胶，造就无边之外美。</p>
+                        <div class="product-price">¥150-400/平方米</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        
+[](@replace=5)
+                    </div>
+                    <div class="product-info">
+                        <h3>名族安全浴霸</h3>
+                        <p>中国两大高端浴霸之一。不止取暖，更是卫浴安全健康管家。</p>
+                        <div class="product-price">¥500-1500/台</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                                      
+[](@replace=1)
+
+                    </div>
+                    <div class="product-info">
+                        <h3>直纹橡木进口木皮</h3>
+                        <p>厚度：8mm/9mm，宽度/槽型：1220mm/平口，900mm/插扣槽，600mm/插扣槽</p>
+                        <div class="product-price">¥320-450/平方米</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories" id="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>产品分类</h2>
+                <p>名族产品覆盖8大系列，满足不同装修需求</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    
+[](@replace=2)
+
+                    <div class="category-overlay">
+                        <h3>大板吊顶</h3>
+                        <p>无醛不伤身，漂亮不变色</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    
+[](@replace=3)
+
+                    <div class="category-overlay">
+                        <h3>安全浴霸</h3>
+                        <p>中国两大高端浴霸之一</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    
+[](@replace=4)
+
+                    <div class="category-overlay">
+                        <h3>集成吊顶</h3>
+                        <p>美观实用，安装便捷</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    
+[](@replace=5)
+
+                    <div class="category-overlay">
+                        <h3>高定木香板</h3>
+                        <p>闻着有木香，用着很健康</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    
+[](@replace=6)
+
+                    <div class="category-overlay">
+                        <h3>超级铝阳台</h3>
+                        <p>防潮防腐蚀，漂亮不变色</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    
+[](@replace=7)
+
+                    <div class="category-overlay">
+                        <h3>电动晾衣机</h3>
+                        <p>可以隐身的高端智能晾衣机</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的成就</h2>
+                <p>30年品牌积累，服务全球客户</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>200,000+</h3>
+                    <p>平方米生产基地</p>
+                </div>
+                <div class="stat-item">
+                    <h3>300+</h3>
+                    <p>专利技术</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>专业研发团队</p>
+                </div>
+                <div class="stat-item">
+                    <h3>72%</h3>
+                    <p>百强地产合作覆盖率</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20,000+</h3>
+                    <p>服务酒店数量</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>客户评价</h2>
+                <p>听听我们的客户怎么说</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "名族高定木香板确实如宣传所说，闻着有木香，用着很健康。我们整个项目都使用了名族产品，客户反馈非常好。"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            
+                        </div>
+                        <div class="author-info">
+                            <h4>张建国</h4>
+                            <p>万科地产项目经理</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="section certification">
+        <div class="container">
+            <div class="section-title">
+                <h2>认证与荣誉</h2>
+                <p>我们的专业得到权威认可</p>
+            </div>
+            <div class="certification-grid">
+                <div class="certification-item">
+                    <i class="fas fa-award"></i>
+                    <h3>CNAS认可国家标准实验室</h3>
+                    <p>拥有2大CNAS检测中心，确保产品质量</p>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>中国绿色建材产品三星级认证</h3>
+                    <p>2023年产品通过绿色建材最高等级认证</p>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-medal"></i>
+                    <h3>多项国标团标起草参编单位</h3>
+                    <p>参与制定行业标准，引领行业发展</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+                <p>随时为您提供专业咨询和服务</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>上海龙胜实业有限公司</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 上海市浦东新区张江高科技园区</p>
+                        <p><i class="fas fa-phone"></i> 服务热线: 400-882-6662</p>
+                        <p><i class="fas fa-envelope"></i> 邮箱: info@chinamingzu.com</p>
+                        <p><i class="fas fa-globe"></i> 网址: www.chinamingzu.com</p>
+                        <p><i class="fas fa-clock"></i> 工作时间: 周一至周五 9:00-18:00</p>
+                    </div>
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮箱</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主题</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.234567890123!2d121.587789!3d31.204567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDEyJzE2LjQiTiAxMjHCsDM1JzE2LjQiRQ!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于名族</h3>
+                    <p>名族装材是中国装材头部企业，集智能家居、吊顶电器、模块化顶墙柜系统、LED照明等装配式高端装材的研发、制造、营销于一体。</p>
+                    <div class="footer-links">
+                        <a href="#"><i class="fas fa-chevron-right"></i> 公司简介</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 企业文化</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 发展历程</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>产品中心</h3>
+                    <div class="footer-links">
+                        <a href="#"><i class="fas fa-chevron-right"></i> 大板吊顶</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 安全浴霸</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 集成吊顶</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 高定木香板</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 超级铝阳台</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 电动晾衣机</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <div class="footer-links">
+                        <a href="#"><i class="fas fa-chevron-right"></i> 产品目录</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 工程案例</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 下载中心</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 常见问题</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 新闻动态</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i> 招贤纳士</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 上海市浦东新区张江高科技园区</p>
+                    <p><i class="fas fa-phone"></i> 400-882-6662</p>
+                    <p><i class="fas fa-envelope"></i> info@chinamingzu.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 上海龙胜实业有限公司. 保留所有权利. 沪ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mainMenu = document.getElementById('main-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('show');
+        });
+        
+        // Language Selector
+        const languageSelect = document.getElementById('language-select');
+        languageSelect.addEventListener('change', (e) => {
+            // In a real application, this would redirect to the selected language version
+            alert(`Language changed to ${e.target.value}. This would redirect to the ${e.target.value} version in a real application.`);
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (mainMenu.classList.contains('show')) {
+                    mainMenu.classList.remove('show');
+                }
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, this would send the data to a server
+            console.log({name, email, phone, subject, message});
+            
+            // Show success message
+            alert('感谢您的留言！我们会尽快与您联系。');
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Product Image Hover Effect
+        const productImages = document.querySelectorAll('.product-image img');
+        productImages.forEach(img => {
+            img.addEventListener('mouseover', () => {
+                img.style.transform = 'scale(1.1)';
+            });
+            img.addEventListener('mouseout', () => {
+                img.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Testimonial Slider (simplified version)
+        let currentTestimonial = 0;
+        const testimonials = [
+            {
+                text: "名族高定木香板确实如宣传所说，闻着有木香，用着很健康。我们整个项目都使用了名族产品，客户反馈非常好。",
+                name: "张建国",
+                title: "万科地产项目经理",
+                image: "https://randomuser.me/api/portraits/men/32.jpg"
+            },
+            {
+                text: "名族大板吊顶的无胶无醛特性是我们选择的关键因素，安装便捷，效果出众，得到了业主的一致好评。",
+                name: "李华",
+                title: "中海地产设计总监",
+                image: "https://randomuser.me/api/portraits/women/44.jpg"
+            },
+            {
+                text: "作为酒店管理集团，我们特别注重材料的环保性和耐用性，名族产品完全符合我们的高标准要求。",
+                name: "王强",
+                title: "洲际酒店集团采购经理",
+                image: "https://randomuser.me/api/portraits/men/67.jpg"
+            }
+        ];
+        
+        function showTestimonial(index) {
+            const testimonial = testimonials[index];
+            const testimonialElement = document.querySelector('.testimonial');
+            
+            testimonialElement.innerHTML = `
+                <div class="testimonial-text">"${testimonial.text}"</div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        
+                    </div>
+                    <div class="author-info">
+                        <h4>${testimonial.name}</h4>
+                        <p>${testimonial.title}</p>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+    </script>
+</body>
+</html>
